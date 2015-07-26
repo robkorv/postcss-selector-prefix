@@ -1,4 +1,5 @@
-# PostCSS Selector Prefix [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# PostCSS Selector Prefix
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 [PostCSS] plugin to add a selector prefix to all selectors.
 
