@@ -1,10 +1,7 @@
-# PostCSS Selector Prefix [![Build Status][ci-img]][ci]
+# PostCSS Selector Prefix [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 [PostCSS] plugin to add a selector prefix to all selectors.
 
-[PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/robkorv/postcss-selector-prefix.svg
-[ci]:      https://travis-ci.org/robkorv/postcss-selector-prefix
 
 ```css
 /* Input example */
@@ -58,7 +55,6 @@ summary {
 #pefix summary {
   display: block;
 }
-}
 ```
 
 ## Usage
@@ -66,3 +62,11 @@ summary {
 ```js
 postcss([ require('postcss-selector-prefix')('#prefix') ])
 ```
+
+[npm-image]: https://badge.fury.io/js/postcss-selector-prefix.svg
+[npm-url]: https://npmjs.org/package/postcss-selector-prefix
+[travis-image]: https://travis-ci.org/robkorv/postcss-selector-prefix.svg
+[travis-url]: https://travis-ci.org/robkorv/postcss-selector-prefix
+[daviddm-image]: https://david-dm.org/robkorv/postcss-selector-prefix.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/robkorv/postcss-selector-prefix
+[PostCSS]: https://github.com/postcss/postcss
