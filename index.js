@@ -4,7 +4,7 @@ var plugin = postcss.plugin('postcss-selector-prefix', function (prefix) {
     return function (root) {
         root.eachRule(function (rule) {
             rule.selectors = rule.selectors.map(function(selector) {
-                if (selector.includes(prefix)) {
+                if (selector.indexOf(prefix) !== -1) {
                     return selector;
                 }
                 else if (selector === 'body' || selector === 'html'){
