@@ -1,6 +1,6 @@
 {
   "name": "postcss-selector-prefix",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "PostCSS plugin to add a selector prefix to all selectors.",
   "keywords": [
     "postcss",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/robkorv/postcss-selector-prefix",
   "dependencies": {
+    "escape-string-regexp": "^1.0.3",
     "postcss": "^4.1.13"
   },
   "devDependencies": {

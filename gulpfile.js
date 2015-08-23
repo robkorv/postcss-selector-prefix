@@ -18,6 +18,8 @@ gulp.task('test', function (done) {
 
 gulp.task('default', ['lint', 'test']);
 
+gulp.task('dev', ['default', 'watch']);
+
 gulp.task('watch', function () {
     gulp.watch(files, ['lint', 'test']);
 });

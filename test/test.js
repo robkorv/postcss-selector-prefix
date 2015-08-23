@@ -35,4 +35,34 @@ describe('postcss-selector-prefix', function () {
         test('#prefix a{ }', '#prefix a{ }', '#prefix', done);
     });
 
+    it(
+    'should prefix class selectors',
+    function (done) {
+        test(
+            '.myclass a{ } .myclass.active a{ }',
+            '#prefix .myclass a{ } #prefix .myclass.active a{ }',
+            '#prefix', done
+        );
+    });
+
+    it(
+    'should convert body.myclass to myprefix.myclass',
+    function (done) {
+        test(
+            'body.myclass { background-color: #fff; }',
+            '#prefix.myclass { background-color: #fff; }',
+            '#prefix', done
+        );
+    });
+
+    it(
+    'should convert html.body.myclass to myprefix.myclass',
+    function (done) {
+        test(
+            'html.body.myclass { background-color: #fff; }',
+            '#prefix.myclass { background-color: #fff; }',
+            '#prefix', done
+        );
+    });
+
 });
