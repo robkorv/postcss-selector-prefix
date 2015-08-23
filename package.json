@@ -21,14 +21,13 @@
   "homepage": "https://github.com/robkorv/postcss-selector-prefix",
   "dependencies": {
     "escape-string-regexp": "^1.0.3",
-    "postcss": "^4.1.13"
+    "postcss": "^5.0.2"
   },
   "devDependencies": {
     "chai": "^3.0.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.0.0",
-    "gulp-mocha": "^2.1.2",
-    "postcss": "^5.0.2"
+    "gulp-mocha": "^2.1.2"
   },
   "scripts": {
     "test": "gulp"
