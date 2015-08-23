@@ -66,7 +66,7 @@ postcss([ require('postcss-selector-prefix')('#prefix') ])
 
 [npm-image]: https://badge.fury.io/js/postcss-selector-prefix.svg
 [npm-url]: https://npmjs.org/package/postcss-selector-prefix
-[travis-image]: https://travis-ci.org/robkorv/postcss-selector-prefix.svg
+[travis-image]: https://travis-ci.org/robkorv/postcss-selector-prefix.svg?branch=master
 [travis-url]: https://travis-ci.org/robkorv/postcss-selector-prefix
 [daviddm-image]: https://david-dm.org/robkorv/postcss-selector-prefix.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/robkorv/postcss-selector-prefix
