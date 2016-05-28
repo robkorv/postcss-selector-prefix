@@ -1,0 +1,23 @@
+{
+  "name": "postcss-selector-prefix-gh-pages",
+  "version": "1.0.0",
+  "description": "examples for postcss-selector-prefix",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robkorv/postcss-selector-prefix.git"
+  },
+  "author": "Robbert Korving <r.korving@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robkorv/postcss-selector-prefix/issues"
+  },
+  "homepage": "https://github.com/robkorv/postcss-selector-prefix#readme",
+  "devDependencies": {
+    "basscss": "^8.0.1",
+    "gulp": "^3.9.1"
+  }
+}

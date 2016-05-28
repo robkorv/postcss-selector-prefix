@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: postcss-selector-prefix
+email: r.korving@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  PostCSS plugin to add a selector prefix to all selectors.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://postcss-selector-prefix.robkorv.nl" # the base hostname & protocol for your site
+github_username:  robkorv/postcss-selector-prefix
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+
+exclude: [node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json]

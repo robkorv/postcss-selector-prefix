@@ -1,0 +1,10 @@
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-metadata
+
+# Ruby
+/.bundle/
+
+#node
+node_modules
