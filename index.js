@@ -4,6 +4,10 @@ var escapeStringRegexp = require('escape-string-regexp');
 var plugin = postcss.plugin('postcss-selector-prefix', function (prefix) {
     return function (root) {
         root.walkRules(function (rule) {
+            // don't touch @keyframes children
+            if (rule.parent && rule.parent.name === 'keyframes') {
+                return;
+            }
             rule.selectors = rule.selectors.map(function (selector) {
                 // replace combinator selectors that can't be prefixed.
                 selector = selector.replace(
