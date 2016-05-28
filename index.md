@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# PostCSS Selector Prefix
+# [PostCSS Selector Prefix](https://github.com/robkorv/postcss-selector-prefix)
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 [PostCSS] plugin to add a selector prefix to all selectors.

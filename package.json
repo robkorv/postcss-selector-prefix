@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/robkorv/postcss-selector-prefix#readme",
   "devDependencies": {
-    "basscss": "^8.0.1",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "postcss-selector-prefix": "^2.0.0"
   }
 }
