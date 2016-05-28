@@ -65,4 +65,18 @@ describe('postcss-selector-prefix', function () {
         );
     });
 
+    it(
+    'should not add prefix to keyframes',
+    function (done) {
+        test(
+            '@keyframes wobble { from { transform: none; }' +
+            '15% { transform: translate3d(-25%, 0, 0)' +
+            'rotate3d(0, 0, 1, -5deg); }}',
+            '@keyframes wobble { from { transform: none; }' +
+            '15% { transform: translate3d(-25%, 0, 0)' +
+            'rotate3d(0, 0, 1, -5deg); }}',
+            '#prefix', done
+        );
+    });
+
 });
