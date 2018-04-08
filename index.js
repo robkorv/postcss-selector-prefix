@@ -1,14 +1,15 @@
-var postcss = require('postcss');
-var escapeStringRegexp = require('escape-string-regexp');
+'use strict';
+const postcss = require('postcss');
+const escapeStringRegexp = require('escape-string-regexp');
 
-var plugin = postcss.plugin('postcss-selector-prefix', function (prefix) {
-    return function (root) {
-        root.walkRules(function (rule) {
+let plugin = postcss.plugin('postcss-selector-prefix', (prefix) => {
+    return (root) => {
+        root.walkRules((rule) => {
             // don't touch @keyframes children
             if (rule.parent && rule.parent.name === 'keyframes') {
                 return;
             }
-            rule.selectors = rule.selectors.map(function (selector) {
+            rule.selectors = rule.selectors.map((selector) => {
                 // replace combinator selectors that can't be prefixed.
                 selector = selector.replace(
                     /^html\.body\.|^html\.|^body\./, prefix + '.'
@@ -18,8 +19,8 @@ var plugin = postcss.plugin('postcss-selector-prefix', function (prefix) {
                 selector = selector.replace(/^body$|^html$/, prefix);
 
                 // create prefix regex.
-                var escapedPrefix = escapeStringRegexp(prefix);
-                var re = new RegExp('^' + escapedPrefix);
+                let escapedPrefix = escapeStringRegexp(prefix);
+                let re = new RegExp('^' + escapedPrefix);
 
                 // don't prefix the already prefixed.
                 if (selector.match(re)) {

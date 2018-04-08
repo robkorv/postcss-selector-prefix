@@ -1,82 +1,90 @@
-var postcss = require('postcss');
-var expect  = require('chai').expect;
+'use strict';
+const postcss = require('postcss');
+const expect  = require('chai').expect;
 
-var plugin = require('../');
+const plugin = require('../');
 
-var test = function (input, output, opts, done) {
-    postcss([ plugin(opts) ]).process(input).then(function (result) {
+let test = (input, output, opts, done) => {
+    postcss([ plugin(opts) ]).process(input).then((result) => {
         expect(result.css).to.eql(output);
         expect(result.warnings()).to.be.empty;
         done();
-    }).catch(function (error) {
+    }).catch((error) => {
         done(error);
     });
 };
 
-describe('postcss-selector-prefix', function () {
+describe('postcss-selector-prefix', () => {
 
-    it('should return css with the selector prefixed', function (done) {
+    it('should return css with the selector prefixed', (done) => {
         test('a{ }', '#prefix a{ }', '#prefix', done);
     });
 
     it(
-    'should replace body and html selectors with selector prefix',
-    function (done) {
-        test(
-            'html { font-size: 10px; } body { background-color: #fff; }',
-            '#prefix { font-size: 10px; } #prefix { background-color: #fff; }',
-            '#prefix', done
-        );
-    });
+        'should replace body and html selectors with selector prefix',
+        (done) => {
+            test(
+                'html { font-size: 10px; } body { background-color: #fff; }',
+                '#prefix { font-size: 10px; } ' +
+                '#prefix { background-color: #fff; }',
+                '#prefix', done
+            );
+        }
+    );
 
     it(
-    'should not add the selector prefix when it\'s already there',
-    function (done) {
-        test('#prefix a{ }', '#prefix a{ }', '#prefix', done);
-    });
+        'should not add the selector prefix when it\'s already there',
+        (done) => {
+            test('#prefix a{ }', '#prefix a{ }', '#prefix', done);
+        }
+    );
 
     it(
-    'should prefix class selectors',
-    function (done) {
-        test(
-            '.myclass a{ } .myclass.active a{ }',
-            '#prefix .myclass a{ } #prefix .myclass.active a{ }',
-            '#prefix', done
-        );
-    });
+        'should prefix class selectors',
+        (done) => {
+            test(
+                '.myclass a{ } .myclass.active a{ }',
+                '#prefix .myclass a{ } #prefix .myclass.active a{ }',
+                '#prefix', done
+            );
+        }
+    );
 
     it(
-    'should convert body.myclass to myprefix.myclass',
-    function (done) {
-        test(
-            'body.myclass { background-color: #fff; }',
-            '#prefix.myclass { background-color: #fff; }',
-            '#prefix', done
-        );
-    });
+        'should convert body.myclass to myprefix.myclass',
+        (done) => {
+            test(
+                'body.myclass { background-color: #fff; }',
+                '#prefix.myclass { background-color: #fff; }',
+                '#prefix', done
+            );
+        }
+    );
 
     it(
-    'should convert html.body.myclass to myprefix.myclass',
-    function (done) {
-        test(
-            'html.body.myclass { background-color: #fff; }',
-            '#prefix.myclass { background-color: #fff; }',
-            '#prefix', done
-        );
-    });
+        'should convert html.body.myclass to myprefix.myclass',
+        (done) => {
+            test(
+                'html.body.myclass { background-color: #fff; }',
+                '#prefix.myclass { background-color: #fff; }',
+                '#prefix', done
+            );
+        }
+    );
 
     it(
-    'should not add prefix to keyframes',
-    function (done) {
-        test(
-            '@keyframes wobble { from { transform: none; }' +
-            '15% { transform: translate3d(-25%, 0, 0)' +
-            'rotate3d(0, 0, 1, -5deg); }}',
-            '@keyframes wobble { from { transform: none; }' +
-            '15% { transform: translate3d(-25%, 0, 0)' +
-            'rotate3d(0, 0, 1, -5deg); }}',
-            '#prefix', done
-        );
-    });
+        'should not add prefix to keyframes',
+        (done) => {
+            test(
+                '@keyframes wobble { from { transform: none; }' +
+                '15% { transform: translate3d(-25%, 0, 0)' +
+                'rotate3d(0, 0, 1, -5deg); }}',
+                '@keyframes wobble { from { transform: none; }' +
+                '15% { transform: translate3d(-25%, 0, 0)' +
+                'rotate3d(0, 0, 1, -5deg); }}',
+                '#prefix', done
+            );
+        }
+    );
 
 });
