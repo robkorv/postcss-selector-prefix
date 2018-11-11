@@ -1,4 +1,4 @@
-## 3.0.1 - Dependencies update, node 0.12 support dropped
+## 3.0.1 - Dev dependencies update
 * [#13](https://github.com/robkorv/postcss-selector-prefix/issues/13) developer dependencies updated following a vulnerability report.
 * fixed links in 2.1.0 changelog lines.
 
