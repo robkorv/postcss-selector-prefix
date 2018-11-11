@@ -1,33 +1,36 @@
-'use strict';
+var eslint = require('gulp-eslint')
+var gulp = require('gulp')
+var jest = require('gulp-jest').default
 
-const eslint = require('gulp-eslint');
-const mocha = require('gulp-mocha');
-const gulp = require('gulp');
+var files = ['index.js', 'test/*.js', 'gulpfile.js']
 
-let files = ['index.js', 'test/*.js', 'gulpfile.js'];
-
-function lintTask(cb) {
+function lintTask (cb) {
     gulp.src(files)
         .pipe(eslint())
         .pipe(eslint.format())
-        .pipe(eslint.failAfterError());
-    cb();
+        .pipe(eslint.failAfterError())
+    cb()
 }
 
-function testTask(cb) {
+function lintWatchTask (cb) {
+    gulp.src(files)
+        .pipe(eslint())
+        .pipe(eslint.format())
+    cb()
+}
+
+function testTask (cb) {
     gulp.src('test/*.js', { read: false })
-        .pipe(mocha());
-    cb();
+        .pipe(jest())
+    cb()
 }
 
-const defaultTask = gulp.series(lintTask, testTask);
+var defaultTask = gulp.series(lintTask, testTask)
 
-function watchTask(cb) {
-    gulp.watch(files, defaultTask);
-    cb();
+function watchTask (cb) {
+    gulp.watch(files, gulp.series(lintWatchTask, testTask))
+    cb()
 }
 
-const devTask = gulp.series(defaultTask, watchTask);
-
-exports.default = defaultTask;
-exports.dev = devTask;
+exports.default = defaultTask
+exports.watch = gulp.series(lintWatchTask, testTask, watchTask)
