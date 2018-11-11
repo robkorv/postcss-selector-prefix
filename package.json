@@ -1,6 +1,6 @@
 {
   "name": "postcss-selector-prefix",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "PostCSS plugin to add a selector prefix to all selectors.",
   "keywords": [
     "postcss",
@@ -21,17 +21,39 @@
   "homepage": "https://github.com/robkorv/postcss-selector-prefix",
   "dependencies": {
     "escape-string-regexp": "^1.0.3",
-    "postcss": "^6.0.21"
+    "postcss": "^7.0.5"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "chai": "^4.1.2",
-    "eslint-config-postcss": "^2.0.2",
+    "eslint-config-logux": "^26.0.1",
+    "eslint-config-postcss": "^3.0.6",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-es5": "^1.3.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.0.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.0",
     "gulp": "^4.0.0",
-    "gulp-eslint": "^4.0.2",
-    "gulp-mocha": "^5.0.0"
+    "gulp-eslint": "^5.0.0",
+    "gulp-jest": "^4.0.2",
+    "jest-cli": "^23.6.0"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "watch": "gulp watch"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "rules": {
+      "indent": [
+        "error",
+        4
+      ],
+      "max-len": [
+        "error",
+        120
+      ]
+    }
   }
 }

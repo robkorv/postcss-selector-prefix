@@ -1,3 +1,7 @@
+## 4.0.0 - Upgrade to postcss 7, refactored code to current plugin boilerplate
+* [#15](https://github.com/robkorv/postcss-selector-prefix/issues/15) main and developer dependencies upgraded to last major versions.
+* Refactored code to match the current [plugin boilerplate](https://github.com/postcss/postcss-plugin-boilerplate)
+
 ## 3.0.1 - Dev dependencies update
 * [#13](https://github.com/robkorv/postcss-selector-prefix/issues/13) developer dependencies updated following a vulnerability report.
 * fixed links in 2.1.0 changelog lines.

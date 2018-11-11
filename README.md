@@ -1,5 +1,5 @@
 # [PostCSS Selector Prefix](https://github.com/robkorv/postcss-selector-prefix)
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-image-dev]][daviddm-url-dev]
 
 [PostCSS] plugin to add a selector prefix to all selectors.
 
@@ -68,6 +68,8 @@ postcss([ require('postcss-selector-prefix')('#prefix') ])
 [npm-url]: https://npmjs.org/package/postcss-selector-prefix
 [travis-image]: https://travis-ci.org/robkorv/postcss-selector-prefix.svg?branch=master
 [travis-url]: https://travis-ci.org/robkorv/postcss-selector-prefix
-[daviddm-image]: https://david-dm.org/robkorv/postcss-selector-prefix.svg?theme=shields.io
+[daviddm-image]: https://david-dm.org/robkorv/postcss-selector-prefix.svg
 [daviddm-url]: https://david-dm.org/robkorv/postcss-selector-prefix
+[daviddm-image-dev]: https://david-dm.org/robkorv/postcss-selector-prefix/dev-status.svg
+[daviddm-url-dev]: https://david-dm.org/robkorv/postcss-selector-prefix?type=dev
 [PostCSS]: https://github.com/postcss/postcss
