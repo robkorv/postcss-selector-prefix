@@ -1,3 +1,6 @@
+## 3.0.1 - Dependencies update, node 0.12 support dropped
+* [#13](https://github.com/robkorv/postcss-selector-prefix/issues/13) developer dependencies updated following a vulnerability report.
+
 ## 3.0.0 - Dependencies update, node 0.12 support dropped
 * dependencies update.
 * [postcss 6 dropped support for node 0.12](https://github.com/postcss/postcss/releases/tag/6.0.0)
