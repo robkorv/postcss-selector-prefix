@@ -1,27 +1,33 @@
 'use strict';
 
-const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
+const gulp = require('gulp');
 
 let files = ['index.js', 'test/*.js', 'gulpfile.js'];
 
-gulp.task('lint', (done) => {
-    return gulp.src(files)
+function lintTask(cb) {
+    gulp.src(files)
         .pipe(eslint())
         .pipe(eslint.format())
-        .pipe(eslint.failAfterError()).on('error', done);
-});
+        .pipe(eslint.failAfterError());
+    cb();
+}
 
-gulp.task('test', (done) => {
-    return gulp.src('test/*.js', { read: false })
-        .pipe(mocha()).on('error', done);
-});
+function testTask(cb) {
+    gulp.src('test/*.js', { read: false })
+        .pipe(mocha());
+    cb();
+}
 
-gulp.task('default', ['lint', 'test']);
+const defaultTask = gulp.series(lintTask, testTask);
 
-gulp.task('dev', ['default', 'watch']);
+function watchTask(cb) {
+    gulp.watch(files, defaultTask);
+    cb();
+}
 
-gulp.task('watch', () => {
-    gulp.watch(files, ['lint', 'test']);
-});
+const devTask = gulp.series(defaultTask, watchTask);
+
+exports.default = defaultTask;
+exports.dev = devTask;
