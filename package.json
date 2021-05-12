@@ -21,7 +21,7 @@
   "homepage": "https://github.com/robkorv/postcss-selector-prefix",
   "dependencies": {
     "escape-string-regexp": "^1.0.3",
-    "postcss": "^7.0.5"
+    "postcss": "^8.2.10"
   },
   "devDependencies": {
     "eslint-config-logux": "^26.0.1",
