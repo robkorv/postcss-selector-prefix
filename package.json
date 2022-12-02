@@ -37,7 +37,7 @@
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
     "gulp-jest": "^4.0.2",
-    "jest-cli": "^23.6.0"
+    "jest-cli": "^29.3.1"
   },
   "scripts": {
     "test": "gulp",
