@@ -1,8 +1,9 @@
-.gitignore
+yarn-error.log
+npm-debug.log
+package-lock.json
+yarn.lock
 
-node_modules/
-
-test/
-.travis.yml
-
-gulpfile.js
+*.test.js
+.github
+.editorconfig
+coverage/

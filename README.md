@@ -1,15 +1,15 @@
 # [PostCSS Selector Prefix](https://github.com/robkorv/postcss-selector-prefix)
+
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-image-dev]][daviddm-url-dev]
 
 [PostCSS] plugin to add a selector prefix to all selectors.
-
 
 ```css
 /* Input example */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
@@ -36,7 +36,7 @@ summary {
 #pefix {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 #pefix {
   margin: 0;
@@ -61,7 +61,7 @@ summary {
 ## Usage
 
 ```js
-postcss([ require('postcss-selector-prefix')('#prefix') ])
+postcss([require("postcss-selector-prefix")("#prefix")]);
 ```
 
 [npm-image]: https://badge.fury.io/js/postcss-selector-prefix.svg
