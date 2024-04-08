@@ -27,7 +27,8 @@
     "node": ">=18.0.0"
   },
   "peerDependencies": {
-    "postcss": "^8.4.27"
+    "postcss": "^8.4.27",
+    "escape-string-regexp": "^5.0.0"
   },
   "devDependencies": {
     "eslint": "^8.47.0",
