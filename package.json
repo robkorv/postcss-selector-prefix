@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/robkorv/postcss-selector-prefix.git"
+    "url": "git+https://github.com/robkorv/postcss-selector-prefix.git"
   },
   "bugs": {
     "url": "https://github.com/robkorv/postcss-selector-prefix/issues"
@@ -41,6 +41,8 @@
       "node": true,
       "es6": true
     },
-    "extends": ["eslint:recommended"]
+    "extends": [
+      "eslint:recommended"
+    ]
   }
 }
