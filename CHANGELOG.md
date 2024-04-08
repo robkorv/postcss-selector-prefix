@@ -1,3 +1,7 @@
+## 5.0.1 - Fix Cannot find module 'escape-string-regexp'
+
+- [#56](https://github.com/robkorv/postcss-selector-prefix/issues/56) fixed "Error: Cannot find module 'escape-string-regexp' when using this package"
+
 ## 5.0.0 - Upgrade to postcss 8, refactored code to current plugin boilerplate
 
 - refactored code to match the current [plugin boilerplate](https://github.com/postcss/postcss-plugin-boilerplate/tree/3.0.0).
