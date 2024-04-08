@@ -1,13 +1,16 @@
 /**
  * @type {import('postcss').PluginCreator}
  */
-const escapeStringRegexp = require("escape-string-regexp");
+// escape function taken from
+// https://github.com/tc39/proposal-regex-escaping/blob/3d45b23af8e8824dd689deb35856a80fa52d78ca/polyfill.js
+const regExpEscape = (s) => String(s).replace(/[\\^$*+?.()|[\]{}]/g, "\\$&");
+
 module.exports = (prefix) => {
   return {
     postcssPlugin: "postcss-selector-prefix",
     Once(root) {
       // create prefix regex.
-      const escapedPrefix = escapeStringRegexp(prefix);
+      const escapedPrefix = regExpEscape(prefix);
       const re = new RegExp("^" + escapedPrefix);
 
       root.walkRules((rule) => {
