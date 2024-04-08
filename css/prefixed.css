@@ -1,52 +1,53 @@
-#prefix h1, #prefix h2, #prefix h3 {
+#prefix h1,
+#prefix h2,
+#prefix h3 {
     color: blue;
 }
 
 #prefix .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
 
 #prefix .animated.infinite {
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 #prefix .animated.hinge {
-  animation-duration: 5s;
+    animation-duration: 5s;
 }
 
 @keyframes wobble {
-  from {
-    transform: none;
-  }
+    from {
+        transform: none;
+    }
 
-  15% {
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-  }
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
 
-  30% {
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-  }
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
 
-  45% {
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-  }
+    45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
 
-  60% {
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-  }
+    60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
 
-  75% {
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-  }
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
 
-  to {
-    transform: none;
-  }
+    to {
+        transform: none;
+    }
 }
 
 #prefix .wobble {
     color: blue;
     animation-name: wobble;
 }
-
