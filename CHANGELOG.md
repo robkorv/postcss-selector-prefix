@@ -1,4 +1,8 @@
-## 5.0.0 - Many things!
+## 5.0.0 - Upgrade to postcss 8, refactored code to current plugin boilerplate
+
+- refactored code to match the current [plugin boilerplate](https://github.com/postcss/postcss-plugin-boilerplate/tree/3.0.0).
+- dependencies update.
+- use gh-actions instead of travis for running tests.
 
 ## 4.0.0 - Node 4 support dropped, Upgrade to postcss 7, refactored code to current plugin boilerplate
 
