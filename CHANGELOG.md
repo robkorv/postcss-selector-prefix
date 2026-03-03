@@ -3,6 +3,7 @@
 - [#60](https://github.com/robkorv/postcss-selector-prefix/pull/60) Bump minimatch from 3.1.2 to 3.1.5
 - Dependencies update with `npm update`.
 - Added node v24 to test run.
+- Updated github actions dependencies.
 
 ## 5.0.1 - Fix Cannot find module 'escape-string-regexp'
 
