@@ -1,3 +1,8 @@
+## 5.0.2 - Dependencies update, following minimatch vulnerability alerts
+
+- [#60](https://github.com/robkorv/postcss-selector-prefix/pull/60) Bump minimatch from 3.1.2 to 3.1.5
+- Dependencies update with `npm update`.
+
 ## 5.0.1 - Fix Cannot find module 'escape-string-regexp'
 
 - [#56](https://github.com/robkorv/postcss-selector-prefix/issues/56) fixed "Error: Cannot find module 'escape-string-regexp' when using this package"
