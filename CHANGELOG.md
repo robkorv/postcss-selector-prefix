@@ -1,3 +1,8 @@
+## 5.0.3 - Dependencies update, following flatted vulnerability alerts
+
+- [#62](https://github.com/robkorv/postcss-selector-prefix/pull/62) Bumps flatted from 3.3.4 to 3.4.2.
+- Dependencies update with `npm update`.
+
 ## 5.0.2 - Dependencies update, following minimatch vulnerability alerts
 
 - [#60](https://github.com/robkorv/postcss-selector-prefix/pull/60) Bump minimatch from 3.1.2 to 3.1.5
