@@ -1,3 +1,10 @@
+## 5.0.4 - Dependencies update, node 18 EOL removed, node 26 added
+
+- Removed node 18 (EOL) from CI, added node 26.
+- [#64](https://github.com/robkorv/postcss-selector-prefix/pull/64) Bumps postcss from 8.5.8 to 8.5.10.
+- [#63](https://github.com/robkorv/postcss-selector-prefix/pull/63) Bumps js-yaml from 4.1.1 to 4.3.0.
+- Dependencies update with `npm update`.
+
 ## 5.0.3 - Dependencies update, following flatted vulnerability alerts
 
 - [#62](https://github.com/robkorv/postcss-selector-prefix/pull/62) Bumps flatted from 3.3.4 to 3.4.2.
