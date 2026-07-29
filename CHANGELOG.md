@@ -1,3 +1,8 @@
+## 5.0.5 - Dependencies update
+
+- [#66](https://github.com/robkorv/postcss-selector-prefix/pull/66) Bumps postcss from 8.5.16 to 8.5.18.
+- [#65](https://github.com/robkorv/postcss-selector-prefix/pull/65) Bumps brace-expansion from 1.1.15 to 1.1.16.
+
 ## 5.0.4 - Dependencies update, node 18 EOL removed, node 26 added
 
 - Removed node 18 (EOL) from CI, added node 26.
