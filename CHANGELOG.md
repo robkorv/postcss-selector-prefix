@@ -1,3 +1,9 @@
+## 5.0.6 - Dependencies update
+
+- [#68](https://github.com/robkorv/postcss-selector-prefix/pull/68) Bumps postcss from 8.5.18 to 8.5.23.
+- [#67](https://github.com/robkorv/postcss-selector-prefix/pull/67) Bumps js-yaml from 4.3.0 to 4.3.1.
+- Dependencies update with `npm update`.
+
 ## 5.0.5 - Dependencies update
 
 - [#66](https://github.com/robkorv/postcss-selector-prefix/pull/66) Bumps postcss from 8.5.16 to 8.5.18.
