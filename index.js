@@ -27,7 +27,9 @@ module.exports = (prefix) => {
           );
 
           // replace descendant combinators that can't be prefixed.
-          selector = selector.replace(/^body$|^html$/, prefix);
+          // :root is included because it only ever matches the document's
+          // root element, which can never be a descendant of the prefix.
+          selector = selector.replace(/^body$|^html$|^:root$/, prefix);
 
           // don't prefix the already prefixed.
           if (selector.match(re)) {

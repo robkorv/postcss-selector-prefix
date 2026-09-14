@@ -52,6 +52,14 @@ test("should convert html.body.myclass to myprefix.myclass", async () => {
   );
 });
 
+test("should replace :root selector with selector prefix", async () => {
+  await run(
+    ":root { --text-color: #fff }",
+    "#prefix { --text-color: #fff }",
+    "#prefix"
+  );
+});
+
 test("should not add prefix to keyframes", async () => {
   await run(
     "@keyframes wobble { from { transform: none }" +
