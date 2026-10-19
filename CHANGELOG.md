@@ -1,3 +1,11 @@
+## 5.0.7 - Fix `:root` prefixing, dependencies update
+
+- [#58](https://github.com/robkorv/postcss-selector-prefix/issues/58) `:root` is now replaced by the prefix, same as `body` and `html`, instead of becoming a never-matching `#prefix :root`.
+- [#70](https://github.com/robkorv/postcss-selector-prefix/pull/70) Bumps js-yaml from 4.3.1 to 4.3.2.
+- [#71](https://github.com/robkorv/postcss-selector-prefix/pull/71) Bumps source-map-js from 1.2.1 to 1.2.2.
+- [#72](https://github.com/robkorv/postcss-selector-prefix/pull/72) Bumps brace-expansion from 1.1.18 to 1.1.21.
+- Dependencies update with `npm update`.
+
 ## 5.0.6 - Dependencies update
 
 - [#68](https://github.com/robkorv/postcss-selector-prefix/pull/68) Bumps postcss from 8.5.18 to 8.5.23.
